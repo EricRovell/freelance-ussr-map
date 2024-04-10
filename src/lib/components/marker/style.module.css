@@ -1,0 +1,8 @@
+.marker {
+	transition: fill 0.125s linear;
+}
+
+.marker:hover {
+	fill: red;
+	filter: drop-shadow(0 0 10px rgb(0 0 0 / 0.5));
+}
