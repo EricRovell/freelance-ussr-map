@@ -11,7 +11,7 @@ export function Modal() {
 		return null;
 	}
 
-	const { id, title } = content;
+	const { id, title, width, height } = content;
 
 	return (
 		<ReactModal
@@ -36,6 +36,8 @@ export function Modal() {
 					className={styles.image}
 					src={`/img/${id}.jpg`}
 					alt={title}
+					width={width}
+					height={height}
 				/>
 			</div>
 		</ReactModal>

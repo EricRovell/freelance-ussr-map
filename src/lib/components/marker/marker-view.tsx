@@ -7,10 +7,10 @@ const INITIAL_SIZE = 32
 
 export function MarkerView() {
 	const { k } = useZoomPanContext();
-	const [ size, setSize ] = useState(INITIAL_SIZE / k + 5);
+	const [ size, setSize ] = useState(INITIAL_SIZE / k + 2);
 
 	useEffect(() => {
-		setSize(INITIAL_SIZE / k + 5)
+		setSize(INITIAL_SIZE / k + 2)
 	}, [ k ]);
 
 	return (

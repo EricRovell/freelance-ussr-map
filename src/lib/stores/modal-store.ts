@@ -3,6 +3,8 @@ import { create } from "zustand";
 interface ModalContent {
 	id?: string;
 	title: string;
+	width: number;
+	height: number;
 }
 
 interface ModalStore {

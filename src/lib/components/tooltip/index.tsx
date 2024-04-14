@@ -15,7 +15,8 @@ export function Tooltip() {
 			content={content}
 			float
 			style={{
-				fontSize: "2rem"
+				fontSize: "1.5rem",
+				maxWidth: "90vw"
 			}}
 		/>
 	);

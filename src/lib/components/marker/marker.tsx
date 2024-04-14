@@ -8,7 +8,7 @@ import { useModalStore } from "../../stores/modal-store";
 import { useTooltipStore } from "../../stores/tooltip-store";
 
 export function Marker(props: Props) {
-	const { title, id, ...rest } = props;
+	const { title, id, width, height, ...rest } = props;
 	const { openModal } = useModalStore();
 	const { setContent, removeContent } = useTooltipStore()
 
@@ -19,8 +19,13 @@ export function Marker(props: Props) {
 	const handleMouseLeave = () => removeContent();
 
 	const handleClick = useCallback(() => {
-		openModal({ id, title });
-	}, [ id, title, openModal ]);
+		openModal({
+			id,
+			title,
+			width,
+			height
+		});
+	}, [ id, title, openModal, width, height ]);
 
 	return (
 		<MapMarker
